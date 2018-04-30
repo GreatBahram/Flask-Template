@@ -1,0 +1,6 @@
+*.db
+*.pyc
+*.swp
+venv/*
+migrations/*
+__pycache__/*
