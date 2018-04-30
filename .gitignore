@@ -4,3 +4,4 @@
 venv/*
 migrations/*
 __pycache__/*
+app/static/img/*
