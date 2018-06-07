@@ -3,8 +3,7 @@ class Config:
     Common configurations
     Put any configurations here that are common across all environments
     """
-    DEBUG = False
-    TESTING = False
+    DEBUG = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
@@ -12,7 +11,6 @@ class DevelopmentConfig(Config):
     """
     Development configurations
     """
-    DEBUG = True
     SQLALCHEMY_ECHO = True
     SECRET_KEY = "FakeK3y"
     SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
@@ -29,6 +27,7 @@ class ProductionConfig(Config):
     """
     Production configurations
     """
+    DEBUG = False
 
 app_config = {
         'development': DevelopmentConfig,
