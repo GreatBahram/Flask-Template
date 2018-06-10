@@ -19,6 +19,10 @@ def create_app(config_name):
     def homepage():
         return "Hello dude, Welcome!"
 
+    @app.errorhandler(401)
+    def forbidden(error):
+        return render_template('errors/401.html', title='Forbidden'), 403
+
     @app.errorhandler(403)
     def forbidden(error):
         return render_template('errors/403.html', title='Forbidden'), 403
