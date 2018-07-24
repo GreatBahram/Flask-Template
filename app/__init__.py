@@ -21,7 +21,7 @@ def create_app(config_name):
 
     @app.errorhandler(401)
     def unauthorized(error):
-        return render_template('errors/401.html', title='Forbidden'), 403
+        return render_template('errors/401.html', title='Forbidden'), 401
 
     @app.errorhandler(403)
     def forbidden(error):
